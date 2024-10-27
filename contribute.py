@@ -3,6 +3,7 @@ from datetime import datetime, timedelta
 import os
 from git import Repo
 import time
+from random import randint
 
 def commit_with_date(repo, date):
     try:
@@ -42,13 +43,13 @@ def commit_with_date(repo, date):
 def main():
     try:
         repo = Repo('.')
-        start_date = datetime(2024, 12, 1)
-        end_date = datetime(2024, 12, 31)
+        start_date = datetime(2024, 10, 27)
+        end_date = datetime(2024, 11, 30)
         current_date = start_date
 
         while current_date <= end_date:
             commit_with_date(repo, current_date)
-            current_date += timedelta(days=1)
+            current_date += timedelta(days=randint(1, 3))
             time.sleep(5)  # 5 second delay between commits
 
     except Exception as e:
