@@ -1,29 +1,59 @@
 import subprocess
 from datetime import datetime, timedelta
-import sys
+import os
+from git import Repo
+import time
 
-def run_git_command(date):
+def commit_with_date(repo, date):
     try:
-        cmd = ["./git.sh", "-y", str(date.year), "-m", str(date.month).zfill(2), "-d", str(date.day).zfill(2)]
-        result = subprocess.run(cmd, capture_output=True, text=True)
+        # Check if there are changes to commit
+        if not repo.is_dirty(untracked_files=True):
+            print("No changes to commit")
+            return
+
+        # Format the date string in ISO 8601 format
+        date_str = date.strftime('%Y-%m-%d %H:%M:%S')
+        
+        # Add all changes
+        repo.git.add('.')
+        
+        # Set environment variables for the commit
+        env = {
+            'GIT_AUTHOR_DATE': date_str,
+            'GIT_COMMITTER_DATE': date_str
+        }
+        
+        # Commit with the formatted date
+        repo.git.commit('-m', f"Update: {date.strftime('%b %d %Y')}", env=env)
+        
+        # Push changes
+        origin = repo.remote(name='origin')
+        origin.push()
+
+        # Log the success
         with open("log.txt", "a") as log:
-            log.write(f"\n{date.strftime('%Y-%m-%d')} - Status: {'Success' if result.returncode == 0 else 'Failed'}\n")
-            if result.stderr:
-                log.write(f"Error: {result.stderr}\n")
+            log.write(f"\n{date.strftime('%Y-%m-%d')} - Status: Success\n")
+            
     except Exception as e:
+        # Log any errors
         with open("log.txt", "a") as log:
             log.write(f"\n{date.strftime('%Y-%m-%d')} - Error: {str(e)}\n")
 
 def main():
-    start_date = datetime(2025, 1, 21)
-    end_date = datetime(2025, 12, 31)
-    current_date = start_date
+    try:
+        repo = Repo('.')
+        start_date = datetime(2024, 12, 1)
+        end_date = datetime(2024, 12, 31)
+        current_date = start_date
 
-    while current_date <= end_date:
-        run_git_command(current_date)
-        current_date += timedelta(days=1)
-        #sleep for 5 seconds
-        subprocess.run(["sleep", "5"])
+        while current_date <= end_date:
+            commit_with_date(repo, current_date)
+            current_date += timedelta(days=1)
+            time.sleep(5)  # 5 second delay between commits
+
+    except Exception as e:
+        with open("log.txt", "a") as log:
+            log.write(f"\nScript Error: {str(e)}\n")
 
 if __name__ == "__main__":
     main()
