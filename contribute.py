@@ -1,6 +1,4 @@
-import subprocess
 from datetime import datetime, timedelta
-import os
 from git import Repo
 import time
 from random import randint
@@ -48,9 +46,19 @@ def main():
         current_date = start_date
 
         while current_date <= end_date:
-            commit_with_date(repo, current_date)
+            # Random number of commits per day (10-20)
+            num_commits = randint(10, 20)
+            
+            for _ in range(num_commits):
+                # Add random hours and minutes to spread commits throughout the day
+                commit_time = current_date + timedelta(
+                    hours=randint(9, 17),  # Business hours
+                    minutes=randint(0, 59)
+                )
+                commit_with_date(repo, commit_time)
+                time.sleep(10)  # 10 second delay between commits
+            
             current_date += timedelta(days=randint(1, 3))
-            time.sleep(5)  # 5 second delay between commits
 
     except Exception as e:
         with open("log.txt", "a") as log:
