@@ -15,13 +15,15 @@ def run_git_command(date):
             log.write(f"\n{date.strftime('%Y-%m-%d')} - Error: {str(e)}\n")
 
 def main():
-    start_date = datetime(2025, 1, 1)
+    start_date = datetime(2025, 1, 21)
     end_date = datetime(2025, 12, 31)
     current_date = start_date
 
     while current_date <= end_date:
         run_git_command(current_date)
         current_date += timedelta(days=1)
+        #sleep for 5 seconds
+        subprocess.run(["sleep", "5"])
 
 if __name__ == "__main__":
     main()
