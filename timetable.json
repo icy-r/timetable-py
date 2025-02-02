@@ -1,0 +1,832 @@
+[
+  {
+    "program": "Sri Lanka Institute of Information Technology",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {
+      "08:30": {
+        "Monday": "Y3.S1.WD.IT.01, Y3.S2.WD.IT.01IT3010 - NDM Lecture, TutorialMs. Shashika Lokuliyana, Mr. Ashvinda IddamalgodaB501",
+        "Tuesday": "-x-",
+        "Wednesday": "IT3040 - ITPM Lecture, TutorialDr. Dilshan de Silva, VL IT 01A506",
+        "Thursday": [
+          "Y3.S1.WD.IT.0101",
+          "IT3040 - ITPM Practical BYOD",
+          "Dr. Dilshan de Silva, Ms. Piyumi Hansadi",
+          "G1102"
+        ],
+        "Friday": "Y3.S1.WD.IT.0101"
+      },
+      "09:30": {
+        "Monday": "-x-",
+        "Tuesday": [
+          "Y3.S1.WD.IT.0101",
+          "IT3040 - ITPM Practical BYOD",
+          "Dr. Dilshan de Silva, Ms. Piyumi Hansadi",
+          "G1102"
+        ],
+        "Wednesday": "Y3.S1.WD.IT.0101",
+        "Thursday": "IT3040 - ITPM Practical BYOD",
+        "Friday": "Dr. Dilshan de Silva, Ms. Piyumi Hansadi"
+      },
+      "10:30": {
+        "Monday": "-x-",
+        "Tuesday": "---",
+        "Wednesday": "Y3.S1.WD.DS.01, Y3.S1.WD.IT.01, Y3.S2.WD.DS.01IT3030 - PAF Lecture, TutorialMr. Vishan Danura JayasinghearachchiA503"
+      },
+      "11:30": {
+        "Monday": [
+          "Y3.S1.WD.IT.0101",
+          "IT3020 - DS Practical BYOD",
+          "Ms. Supipi Karunathilaka, Ms. Malithi Nawarathne",
+          "G604"
+        ],
+        "Tuesday": "Y3.S1.WD.IT.0101",
+        "Wednesday": "IT3020 - DS Practical BYOD",
+        "Thursday": "Ms. Supipi Karunathilaka, Ms. Malithi Nawarathne",
+        "Friday": "G604"
+      },
+      "12:30": {
+        "Monday": [
+          "Y3.S1.WD.IT.0101",
+          "IT3020 - DS Practical BYOD",
+          "Ms. Supipi Karunathilaka, Ms. Malithi Nawarathne",
+          "G604"
+        ],
+        "Tuesday": "Y3.S1.WD.IT.0101",
+        "Wednesday": "IT3020 - DS Practical BYOD",
+        "Thursday": "Ms. Supipi Karunathilaka, Ms. Malithi Nawarathne",
+        "Friday": "G604"
+      },
+      "13:30": {
+        "Monday": "-x-",
+        "Tuesday": "-x-",
+        "Wednesday": "---",
+        "Thursday": [
+          "Y3.S1.WD.IT.0101",
+          "Y3.S1.WD.IT.0102",
+          "IT3030 - PAF Practical BYOD",
+          "IT3040 - ITPM Practical BYOD",
+          "Ms. Bawanthi Gunasekara, Ms. Mokshika Perera",
+          "Dr. Dilshan de Silva, Ms. Dulika Rita Fonseka",
+          "G1102",
+          "G605"
+        ],
+        "Friday": "Y3.S1.WD.IT.0101"
+      },
+      "14:30": {
+        "Monday": "---",
+        "Tuesday": "-x-",
+        "Wednesday": "IT3020 - DS Lecture, TutorialDr. Prasanna Sumathipala, Ms. Malithi NawarathneF301",
+        "Thursday": [
+          "Y3.S1.WD.IT.0101",
+          "Y3.S1.WD.IT.0102",
+          "IT3030 - PAF Practical BYOD",
+          "IT3040 - ITPM Practical BYOD",
+          "Ms. Bawanthi Gunasekara, Ms. Mokshika Perera",
+          "Dr. Dilshan de Silva, Ms. Dulika Rita Fonseka",
+          "G1102",
+          "G605"
+        ],
+        "Friday": "Y3.S1.WD.IT.0101"
+      },
+      "15:30": {
+        "Monday": "---",
+        "Tuesday": "Y3.S1.WD.ISE.01, Y3.S2.WD.ISE.01, Y3.S1.WD.IT.01, Y3.S1.WD.CS.01, Y3.S1.WD.IM.01, Y3.S1.WD.DS.01, Y3.S1.WD.SE.01, Y3.S1.WD.SE.02, Y3.S2.WD.IT.01, Y3.S2.WD.IT.02, Y3.S2.WD.SE.01, Y3.S2.WD.CS.01, Y3.S2.WD.DS.01, Y3.S2.WD.IM.01, Y3.S2.WD.CSNE.01IT3050 - ESDSeminar Lecture OnlineMr. Nelum Chathuranga Amarasena",
+        "Wednesday": [
+          "Y3.S1.WD.IT.0102",
+          "IT3020 - DS Practical BYOD",
+          "Ms. Malithi Nawarathne, Ms. Sameeri Subasinghe",
+          "G1101"
+        ],
+        "Thursday": "Y3.S1.WD.IT.0102",
+        "Friday": "IT3020 - DS Practical BYOD"
+      },
+      "16:30": {
+        "Monday": "---",
+        "Tuesday": [
+          "Y3.S1.WD.IT.0102",
+          "IT3020 - DS Practical BYOD",
+          "Ms. Malithi Nawarathne, Ms. Sameeri Subasinghe",
+          "G1101"
+        ],
+        "Wednesday": "Y3.S1.WD.IT.0102",
+        "Thursday": "IT3020 - DS Practical BYOD",
+        "Friday": "Ms. Malithi Nawarathne, Ms. Sameeri Subasinghe"
+      }
+    }
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Sri Lanka Institute of Information Technology",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {
+      "08:30": {
+        "Monday": "IE3112 - IOT&MS Practical BYODMr. Sharaf Mawjood, Mr. Tharaniyawarma KumaralingamG1104",
+        "Tuesday": "-x-",
+        "Wednesday": "---",
+        "Thursday": "Y3.S1.WD.CS.01, Y3.S2.WD.CS.01IE3112 - IOT&MS Lecture, TutorialMr. Kavinga Yapa Abeywardene, Mr. Tharaniyawarma KumaralingamG601",
+        "Friday": "IE3032 - NS Practical BYODMs. Thriyashi Silva, Ms. Helani HerathG1103"
+      },
+      "09:30": {
+        "Monday": "-x-",
+        "Tuesday": "---"
+      },
+      "10:30": {
+        "Monday": "IE3022 - AIA Lecture, TutorialMr. Kanishka YapaA507",
+        "Tuesday": "-x-",
+        "Wednesday": "Y3.S1.WD.CS.01, Y3.S2.WD.CS.01IE3052 - ISRM Lecture, TutorialMr. Kavinga Yapa AbeywardeneF503",
+        "Thursday": "---"
+      },
+      "11:30": {
+        "Monday": "-x-",
+        "Tuesday": "---",
+        "Wednesday": "IE3022 - AIA Practical CyberSecLabMr. Kanishka Yapa, Ms. Helani HerathCyberSecLab"
+      },
+      "12:30": {
+        "Monday": "-x-",
+        "Tuesday": "---"
+      },
+      "13:30": {
+        "Monday": "-x-",
+        "Tuesday": "-x-",
+        "Wednesday": "-x-",
+        "Thursday": "-x-",
+        "Friday": "-x-"
+      },
+      "14:30": {
+        "Monday": "Y3.S1.WD.CS.01, Y3.S2.WD.CS.01IE3032 - NS Lecture, TutorialDr. Harinda Sahadeva FernandoA505",
+        "Tuesday": "-x-",
+        "Wednesday": "Y3.S1.WD.CS.01, Y3.S2.WD.CS.01IE3042 - SSS Lecture, TutorialMr. Deemantha Siriwardana, Ms. Ayesha WijesooriyaG601",
+        "Thursday": "---",
+        "Friday": "IE3042 - SSS Practical CyberSecLabMr. Deemantha Siriwardana, Ms. Ayesha WijesooriyaCyberSecLab"
+      },
+      "15:30": {
+        "Monday": "Y3.S1.WD.ISE.01, Y3.S2.WD.ISE.01, Y3.S1.WD.IT.01, Y3.S1.WD.CS.01, Y3.S1.WD.IM.01, Y3.S1.WD.DS.01, Y3.S1.WD.SE.01, Y3.S1.WD.SE.02, Y3.S2.WD.IT.01, Y3.S2.WD.IT.02, Y3.S2.WD.SE.01, Y3.S2.WD.CS.01, Y3.S2.WD.DS.01, Y3.S2.WD.IM.01, Y3.S2.WD.CSNE.01IT3050 - ESDSeminar Lecture OnlineMr. Nelum Chathuranga Amarasena",
+        "Tuesday": "---"
+      },
+      "16:30": {
+        "Monday": "---",
+        "Tuesday": "---"
+      }
+    }
+  },
+  {
+    "program": "Sri Lanka Institute of Information Technology",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {
+      "08:30": {
+        "Monday": "Y3.S1.WD.IM.01, Y3.S2.WD.IM.01SE3011 - TEM Lecture, TutorialMr. Ishara GamageG1105",
+        "Tuesday": "Y3.S1.WD.IM.01, Y3.S2.WD.IM.01SE3061 - UED Lecture, TutorialMr. Jagath WickramarathneG1105",
+        "Wednesday": "Y3.S1.WD.IM.01, Y3.S2.WD.IM.01SE3021 - DI&CC Lecture, TutorialMr. Ishara GamageG1105",
+        "Thursday": "Y3.S1.WD.IM.01, Y3.S2.WD.IM.01SE3081 - DMS Lecture, TutorialMr. Didula Chamara Thanaweera ArachchiG1105",
+        "Friday": "---"
+      },
+      "09:30": {
+        "Monday": "---"
+      },
+      "10:30": {
+        "Monday": "---"
+      },
+      "11:30": {
+        "Monday": "Y3.S1.WD.IM.01, Y3.S2.WD.IM.01SE3011 - TEM Practical BYODMr. Ishara Gamage, Mr. Mohomed NushkanG1105",
+        "Tuesday": "Y3.S1.WD.IM.01, Y3.S2.WD.IM.01SE3061 - UED Practical BYODMr. Jagath Wickramarathne, Mr. Mohomed NushkanG1105",
+        "Wednesday": "Y3.S1.WD.IM.01, Y3.S2.WD.IM.01SE3021 - DI&CC Practical BYODMr. Ishara Gamage, Mr. Charith DabareG1105",
+        "Thursday": "Y3.S1.WD.IM.01, Y3.S2.WD.IM.01SE3081 - DMS Practical BYODMr. Didula Chamara Thanaweera Arachchi, Mr. Charith DabareG1105",
+        "Friday": "---"
+      },
+      "12:30": {
+        "Monday": "---"
+      },
+      "13:30": {
+        "Monday": "-x-",
+        "Tuesday": "-x-",
+        "Wednesday": "---",
+        "Thursday": "---",
+        "Friday": "-x-"
+      },
+      "14:30": {
+        "Monday": "---",
+        "Tuesday": "---",
+        "Wednesday": "Y3.S1.WD.IM.01, Y3.S2.WD.IM.01SE3021 - DI&CC Practical BYODMr. Ishara Gamage, Mr. Charith DabareG1105",
+        "Thursday": "---",
+        "Friday": "---"
+      },
+      "15:30": {
+        "Monday": "---",
+        "Tuesday": "Y3.S1.WD.ISE.01, Y3.S2.WD.ISE.01, Y3.S1.WD.IT.01, Y3.S1.WD.CS.01, Y3.S1.WD.IM.01, Y3.S1.WD.DS.01, Y3.S1.WD.SE.01, Y3.S1.WD.SE.02, Y3.S2.WD.IT.01, Y3.S2.WD.IT.02, Y3.S2.WD.SE.01, Y3.S2.WD.CS.01, Y3.S2.WD.DS.01, Y3.S2.WD.IM.01, Y3.S2.WD.CSNE.01IT3050 - ESDSeminar Lecture OnlineMr. Nelum Chathuranga Amarasena",
+        "Wednesday": "---",
+        "Thursday": "---"
+      },
+      "16:30": {
+        "Monday": "---",
+        "Tuesday": "---",
+        "Wednesday": "---",
+        "Thursday": "---"
+      }
+    }
+  },
+  {
+    "program": "Sri Lanka Institute of Information Technology",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {
+      "08:30": {
+        "Monday": "IT3011 - TPSM Practical BYODMr. Samadhi Chathuranga Rathnayake, Ms. Chamina SewwandiG1106",
+        "Tuesday": "-x-",
+        "Wednesday": "IT3031 - DS&DDA Lecture, TutorialMs. Supipi KarunathilakaG601",
+        "Thursday": "---",
+        "Friday": "IT3030 - PAF Practical BYODMs. Chamina Sewwandi, Ms. Bawanthi GunasekaraG1104"
+      },
+      "09:30": {
+        "Monday": "-x-",
+        "Tuesday": "---"
+      },
+      "10:30": {
+        "Monday": "Y3.S1.WD.DS.01, Y3.S2.WD.DS.01IT3021 - DWBI Lecture, TutorialMs. Wishalya Vanshanee TisseraA505",
+        "Tuesday": "-x-",
+        "Wednesday": "Y3.S1.WD.DS.01, Y3.S2.WD.DS.01IT3011 - TPSM Lecture, TutorialMr. Samadhi Chathuranga RathnayakeF502",
+        "Thursday": "Y3.S1.WD.DS.01, Y3.S1.WD.IT.01, Y3.S2.WD.DS.01IT3030 - PAF Lecture, TutorialMr. Vishan Danura JayasinghearachchiA503"
+      },
+      "11:30": {
+        "Monday": "-x-",
+        "Tuesday": "---"
+      },
+      "12:30": {
+        "Monday": "-x-",
+        "Tuesday": "---"
+      },
+      "13:30": {
+        "Monday": "-x-",
+        "Tuesday": "-x-",
+        "Wednesday": "-x-",
+        "Thursday": "-x-",
+        "Friday": "-x-"
+      },
+      "14:30": {
+        "Monday": "---",
+        "Tuesday": "-x-",
+        "Wednesday": "---",
+        "Thursday": "---",
+        "Friday": "---"
+      },
+      "15:30": {
+        "Monday": "IT3031 - DS&DDA Practical BYODMs. Supipi Karunathilaka, Ms. Sameeri SubasingheG1102",
+        "Tuesday": "Y3.S1.WD.ISE.01, Y3.S2.WD.ISE.01, Y3.S1.WD.IT.01, Y3.S1.WD.CS.01, Y3.S1.WD.IM.01, Y3.S1.WD.DS.01, Y3.S1.WD.SE.01, Y3.S1.WD.SE.02, Y3.S2.WD.IT.01, Y3.S2.WD.IT.02, Y3.S2.WD.SE.01, Y3.S2.WD.CS.01, Y3.S2.WD.DS.01, Y3.S2.WD.IM.01, Y3.S2.WD.CSNE.01IT3050 - ESDSeminar Lecture OnlineMr. Nelum Chathuranga Amarasena",
+        "Wednesday": "IT3021 - DWBI Practical BYODMs. Wishalya Vanshanee Tissera, Ms. Rasani Tharushika WijerathnaG606",
+        "Thursday": "---",
+        "Friday": "---"
+      },
+      "16:30": {
+        "Monday": "---",
+        "Tuesday": "---"
+      }
+    }
+  },
+  {
+    "program": "Sri Lanka Institute of Information Technology",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {
+      "08:30": {
+        "Monday": [
+          "Y3.S1.WD.SE.0101",
+          "SE3040 - AF Practical BYOD",
+          "Mr. Eishan Weerasinghe, Ms. Piyumi Navoda",
+          "G1101"
+        ],
+        "Tuesday": "Y3.S1.WD.SE.0101",
+        "Wednesday": "SE3040 - AF Practical BYOD",
+        "Thursday": "Mr. Eishan Weerasinghe, Ms. Piyumi Navoda",
+        "Friday": "G1101"
+      },
+      "09:30": {
+        "Monday": [
+          "Y3.S1.WD.SE.0101",
+          "SE3040 - AF Practical BYOD",
+          "Mr. Eishan Weerasinghe, Ms. Piyumi Navoda",
+          "G1101"
+        ],
+        "Tuesday": "Y3.S1.WD.SE.0101",
+        "Wednesday": "SE3040 - AF Practical BYOD",
+        "Thursday": "Mr. Eishan Weerasinghe, Ms. Piyumi Navoda",
+        "Friday": "G1101"
+      },
+      "10:30": {
+        "Monday": "---",
+        "Tuesday": "-x-",
+        "Wednesday": [
+          "Y3.S1.WD.SE.0101",
+          "SE3020 - DS Practical BYOD",
+          "Mr. Eishan Weerasinghe, Ms. Hansi Achela de Silva",
+          "G1102"
+        ],
+        "Thursday": "Y3.S1.WD.SE.0101",
+        "Friday": "SE3020 - DS Practical BYOD"
+      },
+      "11:30": {
+        "Monday": [
+          "Y3.S1.WD.SE.0101",
+          "Y3.S1.WD.SE.0102",
+          "SE3010 - SEP&QM Practical BYOD",
+          "SE3030 - SA Practical BYOD",
+          "Ms. Kaushalya Rajapakse, Ms. Aparna Jayawardena",
+          "Ms. Poojani Gunathilake",
+          "G606",
+          "G1103"
+        ],
+        "Tuesday": "Y3.S1.WD.SE.0101",
+        "Wednesday": "Y3.S1.WD.SE.0102",
+        "Thursday": "SE3010 - SEP&QM Practical BYOD",
+        "Friday": "SE3030 - SA Practical BYOD"
+      },
+      "12:30": {
+        "Monday": [
+          "Y3.S1.WD.SE.0101",
+          "Y3.S1.WD.SE.0102",
+          "SE3010 - SEP&QM Practical BYOD",
+          "SE3030 - SA Practical BYOD",
+          "Ms. Kaushalya Rajapakse, Ms. Aparna Jayawardena",
+          "Ms. Poojani Gunathilake",
+          "G606",
+          "G1103"
+        ],
+        "Tuesday": "Y3.S1.WD.SE.0101",
+        "Wednesday": "Y3.S1.WD.SE.0102",
+        "Thursday": "SE3010 - SEP&QM Practical BYOD",
+        "Friday": "SE3030 - SA Practical BYOD"
+      },
+      "13:30": {
+        "Monday": "-x-",
+        "Tuesday": "-x-",
+        "Wednesday": "-x-",
+        "Thursday": "-x-",
+        "Friday": "-x-"
+      },
+      "14:30": {
+        "Monday": "---",
+        "Tuesday": "-x-",
+        "Wednesday": "Y3.S1.WD.SE.01, Y3.S1.WD.SE.02, Y3.S2.WD.SE.01SE3020 - DS Lecture, TutorialMs. Hansi Achela de SilvaB502",
+        "Thursday": "---",
+        "Friday": "Y3.S1.WD.SE.01, Y3.S1.WD.SE.02, Y3.S2.WD.SE.01SE3030 - SA Lecture, TutorialMr. Vishan Danura JayasinghearachchiB502"
+      },
+      "15:30": {
+        "Monday": [
+          "Y3.S1.WD.SE.0102",
+          "SE3040 - AF Practical BYOD",
+          "Ms. Piyumi Navoda",
+          "G1103"
+        ],
+        "Tuesday": "Y3.S1.WD.SE.0102",
+        "Wednesday": "SE3040 - AF Practical BYOD",
+        "Thursday": "Ms. Piyumi Navoda",
+        "Friday": "G1103"
+      },
+      "16:30": {
+        "Monday": [
+          "Y3.S1.WD.SE.0102",
+          "SE3040 - AF Practical BYOD",
+          "Ms. Piyumi Navoda",
+          "G1103"
+        ],
+        "Tuesday": "Y3.S1.WD.SE.0102",
+        "Wednesday": "SE3040 - AF Practical BYOD",
+        "Thursday": "Ms. Piyumi Navoda",
+        "Friday": "G1103"
+      }
+    }
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Unknown Program",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {}
+  },
+  {
+    "program": "Sri Lanka Institute of Information Technology",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {
+      "08:30": {
+        "Monday": "---",
+        "Tuesday": "-x-",
+        "Wednesday": "SE3020 - DS Practical BYODMs. Madusha Weerasooriya, Ms. Anudi WanigaratneG1103",
+        "Thursday": "Y3.S1.WD.SE.01, Y3.S1.WD.SE.02, Y3.S2.WD.SE.01SE3010 - SEP&QM Lecture, TutorialMs. Kaushalya RajapakseB502",
+        "Friday": "Y3.S1.WD.SE.01, Y3.S1.WD.SE.02, Y3.S2.WD.SE.01SE3040 - AF Lecture, TutorialMs. Karthiga RajendranB501"
+      },
+      "09:30": {
+        "Monday": "SE3030 - SA Practical BYODMs. Poojani GunathilakeG1103",
+        "Tuesday": "-x-"
+      },
+      "10:30": {
+        "Monday": "-x-",
+        "Tuesday": "SE3010 - SEP&QM Practical BYODMs. Kaushalya Rajapakse, Ms. Aparna JayawardenaG1101"
+      },
+      "11:30": {
+        "Monday": "---",
+        "Tuesday": "-x-",
+        "Wednesday": "---",
+        "Thursday": "---"
+      },
+      "12:30": {
+        "Monday": "---",
+        "Tuesday": "-x-",
+        "Wednesday": "---",
+        "Thursday": "---",
+        "Friday": "---"
+      },
+      "13:30": {
+        "Monday": "-x-",
+        "Tuesday": "-x-",
+        "Wednesday": "-x-",
+        "Thursday": "-x-",
+        "Friday": "-x-"
+      },
+      "14:30": {
+        "Monday": "---",
+        "Tuesday": "-x-",
+        "Wednesday": "Y3.S1.WD.SE.01, Y3.S1.WD.SE.02, Y3.S2.WD.SE.01SE3020 - DS Lecture, TutorialMs. Hansi Achela de SilvaB502",
+        "Thursday": "---",
+        "Friday": "Y3.S1.WD.SE.01, Y3.S1.WD.SE.02, Y3.S2.WD.SE.01SE3030 - SA Lecture, TutorialMr. Vishan Danura JayasinghearachchiB502"
+      },
+      "15:30": {
+        "Monday": "SE3040 - AF Practical BYODMr. Eishan Weerasinghe, Ms. Anudi WanigaratneG605",
+        "Tuesday": "Y3.S1.WD.ISE.01, Y3.S2.WD.ISE.01, Y3.S1.WD.IT.01, Y3.S1.WD.CS.01, Y3.S1.WD.IM.01, Y3.S1.WD.DS.01, Y3.S1.WD.SE.01, Y3.S1.WD.SE.02, Y3.S2.WD.IT.01, Y3.S2.WD.IT.02, Y3.S2.WD.SE.01, Y3.S2.WD.CS.01, Y3.S2.WD.DS.01, Y3.S2.WD.IM.01, Y3.S2.WD.CSNE.01IT3050 - ESDSeminar Lecture OnlineMr. Nelum Chathuranga Amarasena",
+        "Wednesday": "---"
+      },
+      "16:30": {
+        "Monday": "---"
+      }
+    }
+  },
+  {
+    "program": "Sri Lanka Institute of Information Technology",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "schedule": {
+      "08:30": {
+        "Monday": "Y3.S1.WD.ISE.01, Y3.S2.WD.ISE.01IE3051 - EBSAD Practical BYODMs. Rangi Liyanage, Ms. Vihara PeirisG604",
+        "Tuesday": "-x-",
+        "Wednesday": "Y3.S1.WD.ISE.01, Y3.S2.WD.ISE.01IE3011 - ISPM Lecture, TutorialMs. Buddhima AttanayakaA504",
+        "Thursday": "Y3.S1.WD.ISE.01, Y3.S2.WD.ISE.01IE3011 - ISPM Practical BYODMs. Hashini Rajapaksha, Ms. Hiruni PierisG604",
+        "Friday": "Y3.S1.WD.ISE.01, Y3.S2.WD.ISE.01IE3021 - OBFI Lecture, TutorialMr. Sanjeeva PereraG602"
+      },
+      "09:30": {
+        "Monday": "-x-"
+      },
+      "10:30": {
+        "Monday": "Y3.S1.WD.ISE.01, Y3.S2.WD.ISE.01IE3051 - EBSAD Lecture, TutorialMs. Rangi Liyanage, Ms. Vihara PeirisF503",
+        "Tuesday": "-x-",
+        "Wednesday": "---"
+      },
+      "11:30": {
+        "Monday": "-x-",
+        "Tuesday": "---",
+        "Wednesday": "---",
+        "Thursday": "Y3.S1.WD.ISE.01, Y3.S2.WD.ISE.01IE3031 - MIS Practical BYODMs. Rangi Liyanage, Ms. Hiruni PierisG1105"
+      },
+      "12:30": {
+        "Monday": "-x-",
+        "Tuesday": "---",
+        "Wednesday": "---"
+      },
+      "13:30": {
+        "Monday": "-x-",
+        "Tuesday": "-x-",
+        "Wednesday": "-x-",
+        "Thursday": "-x-",
+        "Friday": "-x-"
+      },
+      "14:30": {
+        "Monday": "Y3.S1.WD.ISE.01, Y3.S2.WD.ISE.01IE3041 - DMBI Lecture, TutorialMr. Kavinga Yapa Abeywardene, Ms. Vihara PeirisG603",
+        "Tuesday": "-x-",
+        "Wednesday": "Y3.S1.WD.ISE.01, Y3.S2.WD.ISE.01IE3031 - MIS Lecture, TutorialMs. Chathurangika KahandawarachchiA504",
+        "Thursday": "---",
+        "Friday": "Y3.S1.WD.ISE.01, Y3.S2.WD.ISE.01IE3041 - DMBI Practical BYODMs. Hashini Rajapaksha, Ms. Vihara PeirisG1106"
+      },
+      "15:30": {
+        "Monday": "Y3.S1.WD.ISE.01, Y3.S2.WD.ISE.01, Y3.S1.WD.IT.01, Y3.S1.WD.CS.01, Y3.S1.WD.IM.01, Y3.S1.WD.DS.01, Y3.S1.WD.SE.01, Y3.S1.WD.SE.02, Y3.S2.WD.IT.01, Y3.S2.WD.IT.02, Y3.S2.WD.SE.01, Y3.S2.WD.CS.01, Y3.S2.WD.DS.01, Y3.S2.WD.IM.01, Y3.S2.WD.CSNE.01IT3050 - ESDSeminar Lecture OnlineMr. Nelum Chathuranga Amarasena",
+        "Tuesday": "---"
+      },
+      "16:30": {
+        "Monday": "---",
+        "Tuesday": "---"
+      }
+    }
+  }
+]

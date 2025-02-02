@@ -1,95 +1,115 @@
 from bs4 import BeautifulSoup
 import json
 
-def extract_timetable_data_revised(html_file_path, output_json_path):
-    """
-    Extracts timetable data from an HTML file, correctly handling rowspan,
-    and saves it to a JSON file.
-
-    Args:
-        html_file_path (str): Path to the input HTML file.
-        output_json_path (str): Path to save the output JSON file.
-    """
-
-    with open(html_file_path, 'r', encoding='utf-8') as f:
-        html_content = f.read()
-
+def parse_timetable(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
+    all_tables = soup.find_all('table', id=lambda x: x and x.startswith('table_'))
+    timetables = []
+    
+    for table in all_tables:
+        group_th = table.find('th', colspan='5')
+        if not group_th:
+            continue
+            
+        group_name = group_th.text.strip()
+        days = [th.text.strip() for th in table.find_all('th', class_='xAxis')]
+        schedule = parse_schedule(table, days)
+        timetables.append({'group': group_name, 'schedule': schedule})
+    
+    return timetables
 
-    timetable_data = []
+def parse_schedule(table, days):
+    schedule = {}
+    tbody = table.find('tbody')
+    if not tbody:
+        return schedule
+        
+    rows = tbody.find_all('tr')
+    pending = {day: None for day in days}
+    
+    for row in rows:
+        time_slot = row.find('th', class_='yAxis')
+        if not time_slot:
+            continue
+            
+        time = time_slot.text.strip()
+        schedule[time] = {}
+        cells = row.find_all('td', recursive=False)
+        cell_index = 0
 
-    timetable_tables = soup.find_all('table', id=lambda x: x and x.startswith('table_'))
-
-    for table in timetable_tables:
-        group_name = table.caption.text.strip() if table.caption else "Unknown Group"
-        table_id = table.get('id')
-        group_timetable = {"group": group_name, "table_id": table_id, "schedule": {}}
-
-        header_row = table.find('thead').find_all('tr')[1]
-        days = [th.text.strip() for th in header_row.find_all('th', class_='xAxis')]
-
-        body_rows = table.find('tbody').find_all('tr')
-
-        time_slots = [] # To keep track of time slots in order
-        schedule_data_grid = [] # 2D list to hold schedule data, rows are time slots, cols are days
-
-        for row_index, row in enumerate(body_rows):
-            time_slot_cell = row.find('th', class_='yAxis')
-            if not time_slot_cell:
-                continue
-            time_slot = time_slot_cell.text.strip()
-            time_slots.append(time_slot)
-            schedule_row_data = []
-
-            day_cells = row.find_all('td')
-            col_index_offset = 0 # To handle rowspan cells correctly
-            for day_index, day_cell in enumerate(day_cells):
-                while col_index_offset > 0: # Skip columns spanned by previous rowspan cells
-                    schedule_row_data.append(None) # Placeholder for spanned cells
-                    col_index_offset -= 1
-
-                cell_data = []
-                rowspan = int(day_cell.get('rowspan', 1))
-                detailed_table = day_cell.find('table', class_='detailed')
-
-                if detailed_table:
-                    for detailed_row in detailed_table.find_all('tr'):
-                        detailed_data = [td.text.strip() for td in detailed_row.find_all('td', class_='detailed')]
-                        cell_data.extend(detailed_data)
-                elif day_cell.text.strip() and day_cell.text.strip() not in ('---', '-x-'):
-                    cell_data = [day_cell.text.strip()]
+        for day in days:
+            if pending[day]:
+                # Handle pending rowspan cell
+                cell_data = extract_cell_data(pending[day]['cell'])
+                pending[day]['rows_left'] -= 1
+                if pending[day]['rows_left'] == 0:
+                    pending[day] = None
+                schedule[time][day] = cell_data
+            else:
+                # Handle new cell
+                if cell_index < len(cells):
+                    cell = cells[cell_index]
+                    cell_index += 1
+                    cell_data = extract_cell_data(cell)
+                    schedule[time][day] = cell_data
+                    
+                    # Check for rowspan
+                    if cell.has_attr('rowspan'):
+                        try:
+                            span = int(cell['rowspan'])
+                            if span > 1:
+                                pending[day] = {'cell': cell, 'rows_left': span - 1}
+                        except ValueError:
+                            pass
                 else:
-                    cell_data = []
+                    schedule[time][day] = None
 
-                schedule_row_data.append({'content': cell_data, 'rowspan': rowspan})
-                col_index_offset = rowspan - 1
+    return schedule
 
-            schedule_data_grid.append(schedule_row_data)
+def extract_cell_data(cell):
+    # Handle empty or special cells
+    text = cell.get_text("\n", strip=True)
+    if text in ['---', '-x-']:
+        return None
+        
+    # Handle detailed table cells
+    detailed = cell.find('table', class_='detailed')
+    if detailed:
+        rows = detailed.find_all('tr')
+        if len(rows) >= 4:
+            return {
+                "groups": [g.strip() for g in rows[0].get_text(strip=True).split(",")],
+                "lecture": rows[1].get_text(strip=True),
+                "lecturers": [l.strip() for l in rows[2].get_text(strip=True).split(",")],
+                "hall": rows[3].get_text(strip=True)
+            }
+            
+    # Handle regular cells
+    lines = [line.strip() for line in text.split("\n") if line.strip()]
+    if not lines:
+        return None
+        
+    # Handle group-based format
+    if lines and "," in lines[0] and any(x in lines[0] for x in ["Y3", "Y2", "Y1"]):
+        return {
+            "groups": [g.strip() for g in lines[0].split(",")],
+            "lecture": lines[1] if len(lines) > 1 else "",
+            "lecturers": [lines[2]] if len(lines) > 2 else [],
+            "hall": lines[3] if len(lines) > 3 else ""
+        }
+    
+    # Return simple format
+    return lines if lines else None
 
+def save_to_json(timetables, filename):
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(timetables, f, indent=2, ensure_ascii=False)
 
-        for time_slot_index, time_slot in enumerate(time_slots):
-            group_timetable["schedule"][time_slot] = {}
-            for day_index, day_name in enumerate(days):
-                group_timetable["schedule"][time_slot][day_name] = []
-                if time_slot_index < len(schedule_data_grid) and day_index < len(schedule_data_grid[time_slot_index]):
-                    cell_info = schedule_data_grid[time_slot_index][day_index]
-                else:
-                    print(f"Warning: Index out of range for time_slot_index: {time_slot_index}, day_index: {day_index}")
-                    cell_info = None  # Or handle accordingly
-                if cell_info and cell_info['content']:
-                    group_timetable["schedule"][time_slot][day_name].append(cell_info['content'])
-                else:
-                    group_timetable["schedule"][time_slot][day_name].append([]) # Empty slot
+def main():
+    with open('y3s1.html', 'r', encoding='utf-8') as f:
+        html_content = f.read()
+    timetables = parse_timetable(html_content)
+    save_to_json(timetables, 'timetable.json')
 
-
-        timetable_data.append(group_timetable)
-
-
-    with open(output_json_path, 'w', encoding='utf-8') as outfile:
-        json.dump(timetable_data, outfile, indent=4, ensure_ascii=False)
-
-# Example usage:
-html_file = 'y3s1.html' # Replace with your file path
-json_file = 'timetable_data_revised.json'
-extract_timetable_data_revised(html_file, json_file)
-print(f"Revised timetable data extracted and saved to {json_file}")
+if __name__ == "__main__":
+    main()
