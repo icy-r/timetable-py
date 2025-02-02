@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Streaming</title>
+    <!-- Include Video.js CSS -->
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .layout {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .video-list {
+            width: 300px;
+            background: #2a2a2a;
+            padding: 15px;
+            border-radius: 8px;
+            height: fit-content;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .video-container {
+            flex-grow: 1;
+            position: relative;
+        }
+        .video-item {
+            padding: 10px;
+            margin: 5px 0;
+            background: #3a3a3a;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            word-break: break-all;
+        }
+        .video-item:hover {
+            background: #4a4a4a;
+        }
+        .video-item.active {
+            background: #5a5a5a;
+            border-left: 4px solid #00a8ff;
+        }
+        #status {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            background: #2a2a2a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Video Streaming</h1>
+        <div class="layout">
+            <div class="video-list" id="videoList">
+                <h3>Available Videos</h3>
+            </div>
+            <div class="video-container">
+                <!-- Replace HTML5 video element with Video.js element -->
+                <video
+                  id="videoElement"
+                  class="video-js vjs-default-skin"
+                  controls
+                  preload="auto"
+                  width="640"
+                  height="360"
+                  data-setup='{}'>
+                </video>
+                <div id="status">Select a video</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Video.js library -->
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+    <script>
+        let player;
+        function initVideoPlayer() {
+            // Initialize Video.js player
+            player = videojs('videoElement');
+        }
+
+        function fetchVideoList() {
+            fetch('/list')
+                .then(response => response.json())
+                .then(data => displayVideoList(data.files))
+                .catch(err => document.getElementById('status').textContent = 'Error loading list');
+        }
+
+        function displayVideoList(files) {
+            const videoList = document.getElementById('videoList');
+            videoList.innerHTML = '<h3>Available Videos</h3>';
+            files.forEach(file => {
+                const div = document.createElement('div');
+                div.className = 'video-item';
+                div.textContent = file;
+                div.onclick = () => loadVideo(file);
+                videoList.appendChild(div);
+            });
+        }
+
+        function loadVideo(filename) {
+            // Use Video.js API to update source
+            if (!player) initVideoPlayer();
+            player.src({ src: `/video/${filename}`, type: 'video/mp4' });
+            player.play();
+
+            document.querySelectorAll('.video-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.textContent === filename) item.classList.add('active');
+            });
+            document.getElementById('status').textContent = `Streaming: ${filename}`;
+        }
+
+        fetchVideoList();
+    </script>
+</body>
+</html>

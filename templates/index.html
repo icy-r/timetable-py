@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Streamer</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .video-list { list-style: none; padding: 0; }
+        .video-item { margin: 10px 0; }
+        .video-link { 
+            text-decoration: none; 
+            color: #0366d6;
+            font-size: 1.2em;
+        }
+        #videoPlayer { 
+            width: 80%;
+            max-width: 1000px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Available Videos</h1>
+    <ul class="video-list">
+        {% for video in videos %}
+        <li class="video-item">
+            <a href="#" class="video-link" onclick="playVideo('{{ video }}')">{{ video }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <video id="videoPlayer" controls></video>
+
+    <script>
+        function playVideo(filename) {
+            const videoPlayer = document.getElementById('videoPlayer');
+            videoPlayer.src = `/videos/${encodeURIComponent(filename)}`;
+            videoPlayer.load();
+            videoPlayer.play().catch(error => {
+                console.log('Video play failed:', error);
+            });
+        }
+    </script>
+</body>
+</html>

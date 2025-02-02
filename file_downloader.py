@@ -23,9 +23,9 @@ def download_file(url):
             if file_name:
                 file_name = file_name[0]
             else:
-                file_name = 'File.mp4'
+                file_name = 'file.mkv'
         else:
-            file_name = 'file.mp4'
+            file_name = 'file.mkv'
         
         f = open(file_name, 'wb')
         file_size = int(meta.get("Content-Length"))
