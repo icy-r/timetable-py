@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Video Streamer</title>
+    <title>Media Streamer</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
-        .video-list { list-style: none; padding: 0; }
-        .video-item { margin: 10px 0; }
-        .video-link { 
+        .media-list { list-style: none; padding: 0; }
+        .media-item { margin: 10px 0; }
+        .media-link { 
             text-decoration: none; 
             color: #0366d6;
             font-size: 1.2em;
         }
-        #videoPlayer { 
+        #mediaPlayer {
             width: 80%;
             max-width: 1000px;
             margin-top: 20px;
@@ -19,24 +19,48 @@
     </style>
 </head>
 <body>
-    <h1>Available Videos</h1>
-    <ul class="video-list">
-        {% for video in videos %}
-        <li class="video-item">
-            <a href="#" class="video-link" onclick="playVideo('{{ video }}')">{{ video }}</a>
+    <h1>Available Media</h1>
+    <ul class="media-list">
+        {% for media in media_files %}
+        <li class="media-item">
+            <a href="#" class="media-link" onclick="playMedia('{{ media }}')">{{ media }}</a>
         </li>
         {% endfor %}
     </ul>
-    <video id="videoPlayer" controls></video>
+    <video id="mediaPlayer" controls></video>
 
     <script>
-        function playVideo(filename) {
-            const videoPlayer = document.getElementById('videoPlayer');
-            videoPlayer.src = `/videos/${encodeURIComponent(filename)}`;
-            videoPlayer.load();
-            videoPlayer.play().catch(error => {
-                console.log('Video play failed:', error);
+        function playMedia(filename) {
+            const player = document.getElementById('mediaPlayer');
+            const source = document.createElement('source');
+            
+            // Clear previous sources
+            player.innerHTML = '';
+            
+            source.src = `/media/${encodeURIComponent(filename)}`;
+            source.type = getMimeType(filename);
+            
+            player.appendChild(source);
+            player.load();
+            
+            player.play().catch(error => {
+                console.error('Playback failed:', error);
+                alert('Error playing media. Ensure file format is supported by your browser.');
             });
+        }
+
+        function getMimeType(filename) {
+            const ext = filename.split('.').pop().toLowerCase();
+            const types = {
+                'mp4': 'video/mp4',
+                'mov': 'video/quicktime',
+                'avi': 'video/x-msvideo',
+                'mkv': 'video/x-matroska',
+                'webm': 'video/webm',
+                'mp3': 'audio/mpeg',
+                'wav': 'audio/wav'
+            };
+            return types[ext] || 'video/mp4';
         }
     </script>
 </body>

@@ -121,4 +121,4 @@ if __name__ == '__main__':
     # Run the server
     app.run(host='0.0.0.0', port=5000, threaded=True)
 
-    # ffmpeg -i input.mp4 -movflags faststart output.mp4
+    # ffmpeg -i file.mkv -movflags faststart fiii.mp4
