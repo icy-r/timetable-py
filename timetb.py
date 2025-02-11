@@ -4,8 +4,7 @@ import json
 #new commit 
 def parse_timetable_html_to_json(html_file_path):
     """
-    Parses HTML timetable tables from a file and converts them to JSON.
-
+    
     Args:
         html_file_path (str): Path to the HTML file.
 
