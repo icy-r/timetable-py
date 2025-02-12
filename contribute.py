@@ -41,8 +41,8 @@ def commit_with_date(repo, date):
 def main():
     try:
         repo = Repo('.')
-        start_date = datetime(2024, 10, 17)
-        end_date = datetime(2025, 1, 16)
+        start_date = datetime(2025, 2, 12)
+        end_date = datetime(2025, 3, 1)
         current_date = start_date
 
         while current_date <= end_date:
